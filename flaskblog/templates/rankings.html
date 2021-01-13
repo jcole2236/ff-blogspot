@@ -1,0 +1,345 @@
+<!-- Layout Extension -->
+{% extends "layout.html" %}
+
+<!-- Block Start -->
+{% block content %}
+    <div class="content-section">
+        <h1>Rankings</h1>
+        <hr>
+        <br>
+        <!-- Rankings Start -->
+        <div class="accordion" id="accordionExample">
+            <!-- QB Start -->
+            <div class="accordion-item">
+                <!-- Title Start -->
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        QB
+                    </button>
+                </h2>
+                <!-- Title End -->
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table-responsive-xl">
+                            <!-- Table Head Start -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">PFPs</th>
+                                </tr>
+                            </thead>
+                            <!-- Table Head End -->
+                            <!-- Table Body Start -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Lamar</td>
+                                    <td>Jackson</td>
+                                    <td>Ravens</td>
+                                    <td>345.77</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Patrick</td>
+                                    <td>Mahomes</td>
+                                    <td>Ciefs</td>
+                                    <td>341.39</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Deshaun</td>
+                                    <td>Watson</td>
+                                    <td>Texans</td>
+                                    <td>321.4</td>
+                                </tr>
+                            </tbody>
+                            <!-- Table Body End -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- QB End -->
+            <!-- RB Start -->
+            <div class="accordion-item">
+                <!-- Title Start -->
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        RB
+                    </button>
+                </h2>
+                <!-- Title End -->
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table-responsive-xl">
+                            <!-- Table Head Start -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">PFPs</th>
+                                </tr>
+                            </thead>
+                            <!-- Table Body End -->
+                            <!-- Table Body Start -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Christian</td>
+                                    <td>McCaffrey</td>
+                                    <td>Panthers</td>
+                                    <td>344.7</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Ezekiel</td>
+                                    <td>Elliott</td>
+                                    <td>Cowboys</td>
+                                    <td>311.36</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Saquon</td>
+                                    <td>Barkley</td>
+                                    <td>Giants</td>
+                                    <td>300.75</td>
+                                </tr>
+                            </tbody>
+                            <!-- Table Body End -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- RB End -->
+            <!-- WR Start -->
+            <div class="accordion-item">
+                <!-- Title Start -->
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        WR
+                    </button>
+                </h2>
+                <!-- Title End -->
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <table class="table-responsive-xl">
+                            <!-- Table Head Start -->
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">First</th>
+                                    <th scope="col">Last</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">PFPs</th>
+                                </tr>
+                            </thead>
+                            <!-- Table Body End -->
+                            <!-- Table Body Start -->
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Michael</td>
+                                    <td>Thomas</td>
+                                    <td>Saints</td>
+                                    <td>303.14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Devante</td>
+                                    <td>Adams</td>
+                                    <td>Packers</td>
+                                    <td>253.48</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Julio</td>
+                                    <td>Jones</td>
+                                    <td>Falcons</td>
+                                    <td>253.21</td>
+                                </tr>
+                            </tbody>
+                            <!-- Table Body End -->
+                        </table>
+                    </div>
+                </div>
+                <!-- WR End -->
+                <!-- TE Start -->
+                <div class="accordion-item">
+                    <!-- Title Start -->
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            TE
+                        </button>
+                    </h2>
+                    <!-- Title End -->
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table-responsive-xl">
+                                <!-- Table Head Start -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">PFPs</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Body End -->
+                                <!-- Table Body Start -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Travis</td>
+                                        <td>Kelce</td>
+                                        <td>Chiefs</td>
+                                        <td>264.91</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>George</td>
+                                        <td>Kittle</td>
+                                        <td>49ers</td>
+                                        <td>223.41</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Mark</td>
+                                        <td>Andrews</td>
+                                        <td>Ravens</td>
+                                        <td>200.25</td>
+                                    </tr>
+                                </tbody>
+                                <!-- Table Body End -->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- TE End -->
+                <!-- D/ST Start -->
+                <div class="accordion-item">
+                    <!-- Title Start -->
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            D/ST
+                        </button>
+                    </h2>
+                    <!-- Title End -->
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table-responsive-xl">
+                                <!-- Table Head Start -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">PFPs</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Body End -->
+                                <!-- Table Body Start -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>Steelers</td>
+                                        <td>132.52</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>49ers</td>
+                                        <td>131.62</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>N/A</td>
+                                        <td>N/A</td>
+                                        <td>Bills</td>
+                                        <td>129.55</td>
+                                    </tr>
+                                </tbody>
+                                <!-- Table Body End -->
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- D/ST End -->
+                <!-- Kicker Start -->
+                <div class="accordion-item">
+                    <!-- Title Start -->
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            K
+                        </button>
+                    </h2>
+                    <!-- Title End -->
+                    <!-- Stats Start -->
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <table class="table-responsive-xl">
+                                <!-- Table Head Start -->
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Team</th>
+                                        <th scope="col">PFPs</th>
+                                    </tr>
+                                </thead>
+                                <!-- Table Head End -->
+                                <!-- Table Body Start -->
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Harrison</td>
+                                        <td>Butker</td>
+                                        <td>Chiefs</td>
+                                        <td>143.86</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Wil</td>
+                                        <td>Lutz</td>
+                                        <td>Saints</td>
+                                        <td>138.34</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Justin</td>
+                                        <td>Tucker</td>
+                                        <td>Ravens</td>
+                                        <td>136.62</td>
+                                    </tr>
+                                </tbody>
+                                <!-- Table Body End -->
+                            </table>
+                        </div>
+                    </div>
+                    <!-- Stats End -->
+                </div>
+                <!-- Kicker End -->
+            </div>
+        </div>
+        <!-- Rankings End -->
+        <br>
+        <hr>
+        <br>
+        <!-- Key Start -->
+        <div class="key">
+            <h5>Key</h5>
+            <p>*PFPs: Projected Fantasy Points</p>
+        </div>
+        <!-- Key End -->
+    </div>
+{% endblock content %}
+<!-- Block End -->

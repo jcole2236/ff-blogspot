@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  /* ============== Navbar ============== */
+  --nav-color: #21252c;
+  --nav-primary-color: #cbd5db;
+
+  /* ============== Background ============== */
+  --primary-background-color: #272d38;
+  --secondary-background-color: #ffffff;
+  --border-color: #dddddd;
+  
+  /* ============== Accents ============== */
+  --main-accent-color: #68c39e;
+  --second-accent-color: #51c6da;
+
+  /* ============== Titles ============== */
+  --section-title-color-dark: #444444;
+  --secondary-section-title-color-dark: #37474f;
+
+  /* ============== Text ============== */
+  --main-text-color: ;
+
+  /* ============== Metadata ============== */
+  --main-metadata-color: #333333;
+  --main-metadata-border-color: #e3e3e3;
+}
+
+/* ============== Section(General) ============== */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--primary-background-color);
+  margin-top: 5rem;
+  font-family: 'Caladea', 'sans-serif';
+}
+  
+h1, h2, h3, h4, h5, h6 {
+  color: var(--section-title-color-dark);
+}
+
+.content-section {
+  background: var(--nav-primary-color);
+  padding: 20px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  text-align: center;
+  color: #ffffff;
+}
+
+.list-group-item i {
+  margin-right: 10px;
+  align-content: center;
+  color: #ffffff;
+}
+
+.list-group-item a {
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.spotify{
+  background: rgb(27, 172, 27);
+}
+
+.youtube {
+  background: red;
+}
+
+.twitter {
+  background: lightskyblue;
+}
+
+.instagram {
+  background: linear-gradient(to right, rgb(255,165,0), rgb(128,0,128));
+}
+
+.content-post {
+  background: var(--secondary-background-color);
+  padding: 10px 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.column-logo {
+  height: 100%;
+  width: 100%;
+  max-height: 225px;
+  max-width: 275px;
+  margin-top: 10px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+
+#mail-address {
+  display: inline-block;
+}
+
+#mail-icon {
+  display: none;
+}
+
+#footer {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+#footer .footer-logo img {
+  max-height: 50px;
+  max-width: auto;
+  height: 100%;
+  margin-top: -4.5rem;
+}
+
+#footer .social-icons {
+  margin-top: -1rem;
+}
+
+#footer .social-icons a {
+  margin-right: 10px;
+  color: var(--second-accent-color);
+}
+
+#footer i {
+  color: var(--main-accent-color);
+}
+
+/* ============== Navingation ============== */
+.bg-steel {
+  background-color: var(--nav-color);
+}
+
+.site-header .navbar-nav .nav-link {
+  color: var(--nav-primary-color);
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: var(--second-accent-color);
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.navbar-brand {
+  width: auto;
+  height: auto;
+}
+
+.navbar-brand img {
+  width: auto;
+  height: 100%;
+  max-height: 50px;
+  margin: 2px;
+  padding: 0;
+}
+
+/* ============== Home ============== */
+.home-title {
+  text-align: center;
+}
+
+.carousel-item {
+  max-height: 390px;
+  max-width: 685px;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.carousel-item img{
+  border-radius: 5px;
+}
+
+.carousel-caption{
+  color: #ffffff;
+  background: rgba(	128, 128, 128, 0.92);
+}
+
+.carousel-caption h5 {
+  color: #ffffff;
+}
+
+/* ============== About ============== */
+.about-img {
+  max-height: 375px;
+  max-width: 685px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.about-text p{
+  padding: 5px 0;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  display: inline-block;
+}
+
+/* ============== Rankings ============== */
+.accordion-button {
+  height: auto;
+  width: 100%;
+  max-width: 685px;
+  border-radius: 5px;
+  background: linear-gradient(to right, rgba(81, 198, 218, 0.62), rgba(104, 195, 158, 0.62),  rgba(81, 198, 218, 0.62));
+}
+
+.accordion-body {
+  height: auto;
+  width: 100%;
+  max-width: 685px;
+}
+
+.table-responsive-xl {
+  height: auto;
+  width: 100%;
+  max-width: 685px;
+}
+
+/* thead, tbody, tr, th, td */
+
+/* ============== Forum ============== */
+.article-title {
+  color: var(--section-title-color-dark);
+}
+
+a.article-title:hover {
+  color: var(--second-accent-color);
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--main-metadata-border-color);
+}
+
+.article-metadata a:hover {
+  color: var(--main-metadata-color);
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+/* ============== Media Queries ============== */
+/* Larger devices (Laptop M & Up, less than 1024px) */
+@media (max-width: 1024px){
+  /* Layout */
+  .column-logo {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+/* Medium devices (Tablet L & Laptop S, less than 992px) */
+@media (max-width: 992px) {
+
+}
+
+/* Small devices (Tablet M, less than 768px) */
+@media (max-width: 768px) {
+  /* Layout */
+  .column-logo {
+    margin-top: 0px;
+    margin-left: -1px;
+  }
+
+  #mail-address {
+    display: none;
+  }
+  
+  #mail-icon {
+    display: block;
+    margin: 10px 65px;
+  }
+}
+
+/* Extra small devices (Moblie L & Tablet S, less than 576px) */
+@media (max-width: 576px) {
+  /* Layout */
+  .column-logo {
+    margin-top: 0px;
+    margin-left: 35px;
+  }
+
+  #mail-address {
+    display: block;
+  }
+  
+  #mail-icon {
+    display: none;
+  }
+
+  /* Forum */
+  .article-img {
+    display: none;
+  }
+}
+
+/* Extreme small devices (Moblie M, less than 375px) */
+@media (max-width: 375px) {
+  /* Layout */
+  .column-logo {
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+}
+
+/* Extra-Extreme small devices (Moblie S, less than 320px) */
+@media (max-width: 320px) {
+  /* Layout */
+  .column-logo {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  /* Account */
+  .account-heading {
+    font-size: 1.5rem;
+    display: block;
+  }
+  
+  .text-secondary {
+    font-size: .7rem;
+    display: block;
+  } 
+}

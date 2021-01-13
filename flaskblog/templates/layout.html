@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    <!-- Title -->
+    {% if title %}
+        <title>Flask Blog - {{ title }}</title>
+    {% else %}
+        <title>Flask Blog</title>
+    {% endif %}
+    
+</head>
+<body>
+    <!-- Header Section Start -->
+    <header class="site-header">
+        <!-- Navigation Start -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <div class="container">
+                <a class="navbar-brand mr-4" href="/"><img src="{{ url_for('static', filename='img/logo-no-bg-2.png') }}" alt="FF-BlogSpot Logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navigation Links Start -->
+                <div class="collapse navbar-collapse" id="navbarToggle">
+                    <!-- Navbar Left Side -->
+                    <div class="navbar-nav mr-auto">
+                        <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
+                        <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
+                        <a class="nav-item nav-link" href="{{ url_for('main.rankings') }}">Rankings</a>
+                        <a class="nav-item nav-link" href="{{ url_for('main.forum') }}">Forum</a>
+                    </div>
+                    <!-- Navbar Left Side End -->
+                    <!-- Navbar Right Side -->
+                    <div class="navbar-nav">
+                        {% if current_user.is_authenticated %}
+                            <a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
+                            <a class="nav-item nav-link" href="{{ url_for('users.account') }}">Account</a>
+                            <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">Logout</a>
+                        {% else %}
+                            <a class="nav-item nav-link" href="{{ url_for('users.login') }}">Login</a>
+                            <a class="nav-item nav-link" href="{{ url_for('users.register') }}">Register</a>
+                        {% endif %}
+                    </div>
+                    <!-- Navbar Right Side End -->
+                </div>
+                <!-- Navigation Links End -->
+            </div>
+        </nav>
+        <!-- Navigation End -->
+    </header>
+    <!-- Header Section End -->
+    <!-- Main Section Start-->
+    <main role="main" class="container">
+        <!-- Content start-->
+        <div class="row">
+            <!-- Left Column Start -->
+            <div class="col-md-8 mt-4">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                {% block content %}{% endblock %}
+            </div>
+            <!-- Left Column End -->
+            <!-- Right Column Start -->
+            <div class="col-md-4 mt-4">
+                <div class="content-section">
+                    <img class="column-logo" src="{{ url_for('static', filename='img/ff-blogspot-podcast-icon-name.png') }}" alt="logo">
+                    <hr>
+                    <!-- Social Links Start -->
+                    <div>
+                        <h3>Follow Us</h3>
+                        <p class='text-muted'>Want more content, follow us at:
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-light spotify"><a id="Spotify" href="https://www.spotify.com/"><i class="fab fa-spotify"></i>Spotify</a></li>
+                                <li class="list-group-item list-group-item-light youtube"><a id="YouTube" href="https://www.youtube.com/"><i class="fab fa-youtube"></i>YouTube</a></li>
+                                <li class="list-group-item list-group-item-light twitter"><a id="Twitter" href="https://twitter.com/"><i class="fab fa-twitter"></i>Twitter</a></li>
+                                <li class="list-group-item list-group-item-light instagram"><a id="Instagram" href="https://www.instagram.com/"><i class="fab fa-instagram"></i>Instagram</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                    <!-- Social Links End -->
+                    <hr>
+                    <!-- Contact Information Start -->
+                    <div>
+                        <h3>Contact Us</h3>
+                        <address>
+                            <h5>FF-BlogSpot, Inc.</h5>
+                            <p class="text-muted">
+                                12345 Main St, Suite 100
+                                <br>
+                                Taneytown, MD 21787
+                                <br>
+                                P: (123) 456-7890
+                            </p>
+                            <br>
+                            <p class='text-muted'>
+                                Interested in sponsoring the Podcast? Contact us:
+                                <a id="mail-address" href="mailto:fantasyfootball.blogspot@gmail.com">fantasyfootball.blogspot@gmail.com</a>
+                                <a id="mail-icon" href="mailto:fantasyfootball.blogspot@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+                            </p>
+                        </address>
+                    </div>
+                    <!-- Contact Information End -->
+                </div>
+            </div>
+            <!-- Right Column End -->
+        </div>
+        <!-- Content End-->
+    </main>
+    <!-- Main Section End-->
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="container">
+            <!-- Content start-->
+            <div class="row d-flex flex-column align-items-center">
+                <!-- Logo Start-->
+                <div class="footer-logo">
+                    <img src="{{ url_for('static', filename='img/logo-no-bg-2.png') }}" alt="logo">
+                </div>
+                <!-- Logo end-->
+
+                <!-- Social Start-->
+                <div class="social-icons">
+                    <a href="https://www.spotify.com/"><i class="fab fa-spotify"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <!-- Social end-->
+
+                <!-- Legal start-->
+                <div class="copyright">
+                    <i class="far fa-copyright"> 2020 </i>
+                </div>
+                <!-- Legal end-->
+            </div>
+            <!-- Content end-->
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

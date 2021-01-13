@@ -1,0 +1,35 @@
+<!-- Layout Extension -->
+{% extends "layout.html" %}
+
+<!-- Block End -->
+{% block content %}
+    <div class="content-section">
+        <h1>About</h1>
+        <hr>
+        <!-- Content Start -->
+        <img class="about-img" src="{{ url_for('static', filename='img/high-angle-radio-microphone-laptop.jpg') }}" alt="helmet">
+        <p class="about-text">
+            Welcome to the FF-BlogSpot, your home for high-octane, top-tier, and misguided fantasy football advice!
+            "Three TE's, trust me, its a strat for 2020 PPR..."
+            This podcast and blog is an independent fantasy football podcast that records and produces fantasy football content centered around ... well the fans. 
+            The show is focused on producing and developing content that is driven by the community, for the community!
+        </p>
+        <p class="about-text">
+            The show will launch with the upcoming 2021 season, and will be hosted by John Cole. As a longtime gaming athlete and fantasy footabll trail blazer, I saw a need for a fresh take 
+            in the fantasy football universe, so I hiked up my try hard pants, combed my beard, and went to work.
+        </p>
+        <p class="about-text">
+            If your looking for stat sheets and excel docs, then you've come to the wrong place. Yes we will discuss strategies, league formations and communication, and the sacrate day (draft day).
+            But it's more than that, it's about winning the mental game, reading between the lines, finding the diamonds in the rough, and mocking your friends while you succeed.
+        </p>
+        <p class="about-text">
+            Each episode can also be watched on YouTube. You can also connect with the show on a variety of social media destinations like Twitter and Instagram. 
+        </p>
+        <p class="about-text">
+            The die hard fans of the FF-BlogSpot are affectionately called #BSnation, a tight knit fantasy community. As a completely independent podcast without network backing, the show exists 
+            in part based on the support of the community as well as show advertisers. To learn more about supporting the show, email us at <a href="mailto:fantasyfootball.blogspot@gmail.com">fantasyfootball.blogspot@gmail.com</a>.
+        </p>
+        <!-- Content End -->
+    </div>
+{% endblock content %}
+<!-- Block End -->

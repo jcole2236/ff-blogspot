@@ -1,0 +1,82 @@
+<!-- Layout Extension -->
+{% extends "layout.html" %}
+
+<!-- Block Start -->
+{% block content %}
+    <div class="content-section">
+        <h1 class="home-title">Welcome to the Fantasy Football BlogSpot!</h1>
+        <hr>
+        <!-- Carousel Start -->
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Slides Start -->
+            <div class="carousel-inner">
+                <!-- Slide 1 Start -->
+                <div class="carousel-item active" data-interval="8000">
+                    <a href="{{ url_for('main.forum') }}"><img class="d-block w-100" src="{{ url_for('static', filename='img/pexels-fabricio-trujillo-54567.jpg') }}" alt="field"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="{{ url_for('main.forum') }}"><h5>Under Contstruction</h5></a>
+                        <p>The team is hard at work getting things ready to take the field come the 2021 season!</p>
+                    </div>
+                </div>
+                <!-- Slide 1 End -->
+                <!-- Slide 2 Start -->
+                <div class="carousel-item" data-interval="5000">
+                    <a href="{{ url_for('main.forum') }}"><img class="d-block w-100" src="{{ url_for('static', filename='img/pexels-pixabay-209954.jpg') }}" alt="ref"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="{{ url_for('main.forum') }}"><h5>2021 NFL Rule Changes</h5></a>
+                        <p>Starting in 2021, the NFL has the option to expand the regular season from 16 to 17 games...</p>
+                    </div>
+                </div>
+                <!-- Slide 2 End -->
+                <!-- Slide 3 Start -->
+                <div class="carousel-item" data-interval="5000">
+                    <a href="{{ url_for('main.rankings') }}"><img class="d-block w-100" src="{{ url_for('static', filename='img/pexels-lucas-andrade-2862718.jpg') }}" alt="helmet"></a>
+                    <div class="carousel-caption d-none d-md-block">
+                        <a href="{{ url_for('main.rankings') }}"><h5>Early Projections 2021</h5></a>
+                        <p>It's never to early to start thinking about next season, 2021 predications coming soon.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 End -->
+            </div>
+            <!-- Slides End -->
+            <!-- Carousel Navigation Start -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="visually-hidden">Next</span>
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+            <!-- Carousel Navigation End -->
+        </div>
+        <!-- Carousel End -->
+        <hr>
+    </div>
+    <!-- Sponsorship Start -->
+    <div class="content-section">
+        <div class="card text-center">
+            <!-- Title Start -->
+            <div class="card-header">
+                Sponsor
+            </div>
+            <!-- Title End -->
+            <!-- Message Start -->
+            <div class="card-body">
+                <h5 class="card-title">Insert Company Name</h5>
+                <p class='text-muted'>Interested in sponsoring the Podcast? Contact us:
+                    <a href="mailto:fantasyfootball.blogspot@gmail.com">fantasyfootball.blogspot@gmail.com</a>.
+                </p> 
+                <a href="#" class="btn btn-primary">Your Product Link</a>
+            </div>
+            <!-- Message End -->
+        </div>
+    </div>
+    <!-- Sponsorship End -->
+{% endblock content %}
+<!-- Block End -->

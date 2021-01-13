@@ -1,0 +1,56 @@
+<!-- Layout Extension -->
+{% extends "layout.html" %}
+
+<!-- Block Start -->
+{% block content %}
+    <div class="content-section">
+        <!-- Form Start -->
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">{{ legend }}</legend>
+                <!-- Title Start -->
+                <div class="form-group">
+                    {{ form.title.label(class="form-control-label") }}
+                    <!-- Error Start -->
+                    {% if form.title.errors %}
+                        {{ form.title(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.title(class="form-control form-control-lg") }}
+                    {% endif %}
+                    <!-- Error End -->
+                </div>
+                <!-- Title End -->
+                <!-- Content Start -->
+                <div class="form-group">
+                    {{ form.content.label(class="form-control-label") }}
+                    <!-- Error Start -->
+                    {% if form.content.errors %}
+                        {{ form.content(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.content.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.content(class="form-control form-control-lg") }}
+                    {% endif %}
+                    <!-- Error End -->
+                </div>
+                <!-- Content End -->
+                <!-- Submit Start -->
+                <div class="form-group mt-2">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+                <!-- Submit End -->
+            </fieldset>
+        </form>
+        <!-- Form End -->
+    </div>
+{% endblock content %}
+<!-- Block End -->
